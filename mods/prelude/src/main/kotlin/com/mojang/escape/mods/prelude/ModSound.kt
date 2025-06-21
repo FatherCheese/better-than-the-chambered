@@ -1,6 +1,6 @@
 package com.mojang.escape.mods.prelude
 
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 
 object ModSound {
     val bosskill = Sound.loadSound("/snd/bosskill.wav", this::class.java)

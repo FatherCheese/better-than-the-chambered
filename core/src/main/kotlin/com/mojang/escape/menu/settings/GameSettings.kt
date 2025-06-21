@@ -1,7 +1,7 @@
 package com.mojang.escape.menu.settings
 
 import com.mojang.escape.Keys
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.lang.Language
 import com.mojang.escape.toTranslatable
 

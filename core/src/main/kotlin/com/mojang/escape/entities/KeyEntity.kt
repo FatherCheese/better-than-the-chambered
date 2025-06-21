@@ -1,7 +1,7 @@
 package com.mojang.escape.entities
 
 import com.mojang.escape.Art
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.gui.BasicSprite
 import com.mojang.escape.gui.Sprite
 

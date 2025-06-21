@@ -1,6 +1,6 @@
 package com.mojang.escape.mods.prelude.level.block
 
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.entities.Item
 import com.mojang.escape.mods.prelude.gui.RubbleSprite
 import com.mojang.escape.level.Level

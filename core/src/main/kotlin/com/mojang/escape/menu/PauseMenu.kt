@@ -1,6 +1,7 @@
 package com.mojang.escape.menu
 
 import com.mojang.escape.*
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.gui.Bitmap
 
 class PauseMenu(lastMenu: Menu? = null) : Menu(lastMenu) {

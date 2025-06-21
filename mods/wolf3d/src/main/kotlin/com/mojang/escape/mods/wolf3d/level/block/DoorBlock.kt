@@ -1,6 +1,6 @@
 package com.mojang.escape.mods.wolf3d.level.block
 
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.col
 import com.mojang.escape.entities.*
 import com.mojang.escape.gui.Bitmap3D

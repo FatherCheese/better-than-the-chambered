@@ -1,6 +1,6 @@
 package com.mojang.escape.mods.prelude.level.block
 
-import com.mojang.escape.Sound
+import com.mojang.escape.audio.Sound
 import com.mojang.escape.entities.Item
 import com.mojang.escape.level.Level
 import com.mojang.escape.level.block.SolidBlock

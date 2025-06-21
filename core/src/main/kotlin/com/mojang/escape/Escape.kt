@@ -1,9 +1,8 @@
 package com.mojang.escape
 
+import com.mojang.escape.audio.AudioEngine
 import com.mojang.escape.gui.Screen
 import com.mojang.escape.render.Display
-import jdk.internal.util.xml.impl.Input
-import org.lwjgl.*
 import org.lwjgl.glfw.*
 import org.lwjgl.opengl.*
 
@@ -28,21 +27,34 @@ class Escape {
     
     private lateinit var game: Game
     private lateinit var screen: Screen
+    private lateinit var audioEngine: AudioEngine
     
     private val display = Display()
     
     private val inputHandler: InputHandler = InputHandler()
     
     fun run() {
+        initOpenAL()
         initGLFW()
         initGame()
         loop()
         
         glfwFreeCallbacks(window)
         glfwDestroyWindow(window)
-        
+
+        audioEngine.cleanup()
         glfwTerminate()
         glfwSetErrorCallback(null)?.free()
+    }
+
+    fun initOpenAL(): Boolean {
+        audioEngine = AudioEngine()
+        if (!audioEngine.initialize()) {
+            println("Failed to initialize OpenAL")
+            return false
+        }
+
+        return true;
     }
     
     fun initGLFW() {
@@ -162,7 +174,8 @@ class Escape {
 
                 tickCount++
                 if (tickCount % 60 == 0) {
-                    println("$frames fps")
+                    glfwSetWindowTitle(window, "Better than the Chambered! (${frames
+                    } fps)")
                     lastTime += 1000
                     frames = 0
                 }
